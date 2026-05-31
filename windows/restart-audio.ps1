@@ -1,4 +1,5 @@
-net stop audiosrv
-net stop AudioEndpointBuilder
-net start AudioEndpointBuilder
-net start audiosrv
+Stop-Service -Name "audiosrv" -Force
+Stop-Service -Name "AudioEndpointBuilder" -Force
+
+Start-Service -Name "AudioEndpointBuilder"
+Start-Service -Name "audiosrv"
